@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+  --White: #fff;
+  --FontPoppins: "Poppins", sans-serif;
+  --FonstOpen: "Open Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--FontPoppins);
+}
+
+.main {
+  height: 100vh;
+  background-image: url("../images/bg-desktop.svg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--Violet);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 11rem;
+  color: var(--White);
+}
+
+.main .container .main-header {
+  width: 100%;
+  display: flex;
+  justify-content: left;
+}
+
+.main .container .main-header img {
+  width: 200px;
+}
+
+.main .container .section-container {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.main .container .section-container .image {
+  width: 50%;
+}
+
+.main .container .section-container .image img {
+  width: 100%;
+  height: 400px;
+}
+
+.main .container .section-container .text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  padding: 2rem;
+}
+
+.main .container .section-container .text .title {
+  font-weight: 700;
+  font-size: 2.4rem;
+}
+
+.main .container .section-container .text .description {
+  font-size: 1.07rem;
+  font-family: var(--FonstOpen);
+  font-weight: normal;
+}
+
+.main .container .section-container .text .register {
+  width: 150px;
+  border-radius: 2rem;
+  background-color: var(--White);
+  color: var(--Violet);
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+  margin-top: 1.5rem;
+  padding: 0.8rem;
+  transition: all 0.5s ease;
+}
+
+.main .container .section-container .text .register:hover {
+  cursor: pointer;
+  background-color: var(--SoftMagenta);
+  color: var(--White);
+}
+
+.main .container .main-footer {
+  width: 100%;
+  display: flex;
+  padding-right: 2rem;
+  justify-content: right;
+  gap: 1rem;
+}
+
+.main .container .main-footer i {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 0.0625rem solid var(--White);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.main .container .main-footer i:hover {
+  color: var(--SoftMagenta);
+  border-color: var(--SoftMagenta);
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .main .container {
+    padding: 4rem;
+  }
+
+  .main .container .section-container {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 645px) {
+  .main {
+    height: 120vh;
+  }
+  .main .container {
+    padding: 2rem;
+  }
+
+  .main .container .section-container {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .main .container .section-container .image,
+  .main .container .section-container .text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .main .container .section-container .text {
+    align-items: center;
+  }
+
+  .main .container .section-container .text .register {
+    width: 60%;
+    padding: 1rem;
+  }
+
+  .main .container .main-footer {
+    padding: 0;
+    justify-content: center;
+  }
+}
